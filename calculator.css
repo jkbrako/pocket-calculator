@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  background-color: black;
 }
 
 * , *::before, *::after {
@@ -9,6 +10,10 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+h1 {
+
 }
 
 .calculator {
@@ -24,14 +29,13 @@ html {
 .calculator-screen {
   width: 94%;
   font-size: 5rem;
-  height: 100px;
+  height: 110px;
   border: 1px inset;
   background-color: black;
   color: white;
   text-align: right;
   padding-right: 20px;
   padding-left: 10px;
-
 }
 button {
   height: 40px;

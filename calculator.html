@@ -5,11 +5,11 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="calculator.css"/>
     <script type="text/javascript" src="calculator.js"></script>
+    <h1>Pocket Calculator By Jamin Brako</h1>
 
 <div class="calculator">
 
   <input type="text" class="calculator-screen" value="" disabled />
-
   <div class="calculator-keys">
 
 <!-- Negate button-->
@@ -42,14 +42,17 @@
 
     <!-- Operators -->
     <button onclick="decimal()" type="button" class="decimal" value=".">.</button>
-    <button onclick="clear()"type="button" class="clear" value="clear-all">AC</button>
 
     <button onclick="equal()" type="button" class="equal-sign" value="=">=</button>
 
     <!-- Nice-to-Haves -->
     <button onclick="x2power()"type="button" class="power" value="x^2">x^2</button>
     <button onclick="x3power()"type="button" class="power" value="x^3">x^3</button>
+    <button onclick="clear()"type="button" class="clear" value="clear-all">AC</button>
     <button onclick="xypower()"type="button" class="power" value="x^y">x^y</button>
 
+    <button onclick="rootx()"type="button" class="root" value="√x">√x</button>
+    <button onclick="cuberoot()"type="button" class="root" value="3√x">3√x</button>
+    <button onclick="yroot()"type="button" class="root" value="y√x">y√x</button>
   </div>
 </div>

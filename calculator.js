@@ -5,15 +5,15 @@ const calculator = {
   operator: null,
 };
 
-/*function updateDisplay() {
-  const display = document.querySelector('.calculator-screen');
+function updateDisplay() {
+  const display = document.innerHTML('calculator-screen');
   display.value = calculator.displayValue;
+  updateDisplay();
 }
 
-updateDisplay();*/
-// function negate() {
+ function negate() {
 
-//}
+}
 
 function number(numb) {
 let numbers = document.getElementById(".calculator-screen").innerHTML += numb;
@@ -82,7 +82,7 @@ function handleOperator(nextOperator) {
 }*/
 
 function equal() {
-  inner.html = eval(expression.toString());
+  document.innerHTML("equal-sign") = eval(expression.toString());
 }
 //Nice-to-Haves//
 function x2power() {
