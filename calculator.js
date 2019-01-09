@@ -6,8 +6,9 @@ const calculator = {
 };
 
 function updateDisplay() {
-  const display = document.innerHTML('calculator-screen');
+  const display = document.querySelector('.calculator-screen');
   display.value = calculator.displayValue;
+//  let display = p.getElementById("screen").innerHTML
   updateDisplay();
 }
 
@@ -16,7 +17,7 @@ function updateDisplay() {
 }
 
 function number(numb) {
-let numbers = document.getElementById(".calculator-screen").innerHTML += numb;
+let numbers = document.getElementById("calculator-screen").innerHTML += numb;
 console.log("numb");
 // To check if numbers appear in console
 }
@@ -52,7 +53,9 @@ function clear() {
 
 }
 
-/*function numb(number) {
+function number(numb) {
+  let numbers = document.getElementById("calculator-screen").innerHTML += numb;
+  console.log("numb");
   const { displayValue, waitingForSecondOperand } = calculator;
 
   if (waitingForSecondOperand === true) {
@@ -79,10 +82,10 @@ function handleOperator(nextOperator) {
     calculator.displayValue = String(result);
     calculator.displayValue
   }
-}*/
+}
 
 function equal() {
-  document.innerHTML("equal-sign") = eval(expression.toString());
+  document.getElementById("equal-sign") == eval(expression.toString());
 }
 //Nice-to-Haves//
 function x2power() {
