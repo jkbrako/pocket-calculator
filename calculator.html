@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="calculator.css"/>
     <script type="text/javascript" src="calculator.js"></script>
     <h1>Pocket Calculator By Jamin Brako</h1>
-<form class="screen" id="screen">
-<div class="calculator">
+  </head>
+  <body onload="calculatorStartup()">
+    <div class="calculator">
 
-  <input type="text"  class="calculator-screen" value="" disabled />
+  <input type="text" id="screen" class="calculator-screen" value="" disabled />
+  <p id = "test"></p>
   <div class="calculator-keys">
 
 <!-- Negate button-->
@@ -41,7 +43,7 @@
     <button onclick="numb(0)" type="button" id="numb" value="0">0</button>
 
     <!-- Operators -->
-    <button onclick="decimal()" type="button" class="decimal" value=".">.</button>
+    <button onclick="decimal()" type="button" id="dot" class="decimal" value=".">.</button>
 
     <button onclick="equal()" type="button" class="equal-sign" id="equal-sign" value="=">=</button>
 
@@ -56,3 +58,5 @@
     <button onclick="yroot()"type="button" class="root" value="y√x">y√x</button>
   </div>
 </div>
+</body>
+</html>

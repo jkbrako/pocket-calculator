@@ -5,10 +5,13 @@ const calculator = {
   operator: null,
 };
 
+function calculatorStartup() {
+  document.getElementById("screen").value = 0;
+}
+
 function updateDisplay() {
-  const display = document.querySelector('.calculator-screen');
+  const display = document.getElementById("screen");
   display.value = calculator.displayValue;
-//  let display = p.getElementById("screen").innerHTML
   updateDisplay();
 }
 
@@ -16,9 +19,9 @@ function updateDisplay() {
 
 }
 
-function number(numb) {
-let numbers = document.getElementById("calculator-screen").innerHTML += numb;
-console.log("numb");
+function numb(numb) {
+document.getElementById("screen").value += numb;
+console.log(numb);
 // To check if numbers appear in console
 }
 
@@ -47,6 +50,8 @@ function decimal(dot) {
   if (!calculator.displayValue.includes(dot)) {
     calculator.displayValue += dot;
   }
+  console.log(dot)
+  document.getElementById("screen").innerHTML += dot;
 }
 
 function clear() {
@@ -55,7 +60,7 @@ function clear() {
 
 function number(numb) {
   let numbers = document.getElementById("calculator-screen").innerHTML += numb;
-  console.log("numb");
+  console.log(numb);
   const { displayValue, waitingForSecondOperand } = calculator;
 
   if (waitingForSecondOperand === true) {
