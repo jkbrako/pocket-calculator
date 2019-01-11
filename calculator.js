@@ -22,6 +22,7 @@ function updateDisplay() {
 function numb(numb) {
 document.getElementById("screen").value += numb;
 console.log(numb);
+
 // To check if numbers appear in console
 }
 
@@ -45,13 +46,14 @@ function percent() {
 
 }
 function decimal(dot) {
-  if (calculator.waitingForSecondOperand  === true) return;
+  /* if (calculator.waitingForSecondOperand  === true) return;
 
-  if (!calculator.displayValue.includes(dot)) {
-    calculator.displayValue += dot;
-  }
-  console.log(dot)
+    if (!calculator.displayValue.includes(dot)) {
+      calculator.displayValue += dot;
+    }*/
+  console.log(dot);
   document.getElementById("screen").innerHTML += dot;
+
 }
 
 function clear() {
@@ -59,7 +61,7 @@ function clear() {
 }
 
 function number(numb) {
-  let numbers = document.getElementById("calculator-screen").innerHTML += numb;
+  let numbers = document.getElementById("screen").innerHTML += numb;
   console.log(numb);
   const { displayValue, waitingForSecondOperand } = calculator;
 
