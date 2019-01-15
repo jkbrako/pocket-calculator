@@ -45,21 +45,18 @@ function divide() {
 function percent() {
 
 }
-function decimal(dot) {
+function decimal(numb) {
   /* if (calculator.waitingForSecondOperand  === true) return;
 
     if (!calculator.displayValue.includes(dot)) {
       calculator.displayValue += dot;
     }*/
-  console.log(dot);
-  document.getElementById("screen").innerHTML += dot;
-
+  document.getElementById("screen").value += numb;
+  console.log(numb);
 }
 
 function clear() {
-
 }
-
 function number(numb) {
   let numbers = document.getElementById("screen").innerHTML += numb;
   console.log(numb);
@@ -87,7 +84,7 @@ function handleOperator(nextOperator) {
     const currentValue = firstOperand || 0;
     const result = performCalculation[operator] (currentValue, inputValue);
     calculator.displayValue = String(result);
-    calculator.displayValue
+    calculator.displayValue;
   }
 }
 
