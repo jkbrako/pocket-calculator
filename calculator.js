@@ -20,10 +20,27 @@ function updateDisplay() {
 }
 
 function numb(numb) {
-document.getElementById("screen").value += numb;
-console.log(numb);
 
 // To check if numbers appear in console
+if (document.getElementById("screen").value != "0") {
+  console.log("1");
+  document.getElementById("screen").value += numb;
+}
+//if (numb != 0) {
+//  numb = numb;
+else if (document.getElementById("screen").value == "0") {
+  document.getElementById("screen").value = numb;
+  console.log("2");
+}
+
+/*  const { displayValue, waitingForSecondOperand } = calculator;
+
+  if (waitingForSecondOperand === true) {
+  calculator.displayValue = number;
+  calculator.waitingForSecondOperand = false;
+} else {
+  displayValue === '0' ? number : displayValue + number;
+} */
 }
 
 function plus() {
@@ -55,23 +72,12 @@ function decimal(numb) {
   console.log(numb);
 }
 
-function clear() {
-}
-function number(numb) {
-  let numbers = document.getElementById("screen").innerHTML += numb;
-  console.log(numb);
-  const { displayValue, waitingForSecondOperand } = calculator;
-
-  if (waitingForSecondOperand === true) {
-    calculator.displayValue = number;
-    calculator.waitingForSecondOperand = false;
-  } else {
-    displayValue === '0' ? number : displayValue + number;
-      }
+function clearScreen() {
+  document.getElementById("screen").value = 0;
 }
 
 function handleOperator(nextOperator) {
-  const { firstOperand, displayValue, operator } = calculator;
+/*  const { firstOperand, displayValue, operator } = calculator;
   const inputValue = parseFloat(displayValue);
 
   if (operator && calculator.waitingForSecondOperand) {
@@ -85,11 +91,12 @@ function handleOperator(nextOperator) {
     const result = performCalculation[operator] (currentValue, inputValue);
     calculator.displayValue = String(result);
     calculator.displayValue;
-  }
+  } */
 }
 
 function equal() {
-  document.getElementById("equal-sign") == eval(expression.toString());
+  document.getElementById("equal-sign") == eval(expression.toString(numb));
+  console.log(numb + numb);
 }
 //Nice-to-Haves//
 function x2power() {
