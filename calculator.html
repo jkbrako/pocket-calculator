@@ -10,21 +10,24 @@
   <body onload="calculatorStartup()">
     <div class="calculator">
 
+  <input type="String" id="baby-screen" class="calculator-screen" value="" disabled />
   <input type="text" id="screen" class="calculator-screen" value="" disabled />
-  <p id = "test"></p>
+  <p id = "test"> </p>
   <div class="calculator-keys">
 
 <!-- Negate button-->
-    <button onclick="negate()" type="button" class="operator" value="+/-">+/-</button>
+
+    <button onclick="negate()" type="button" id=opp class="operator" value="+/-">+/-</button>
 
   <!-- Operators -->
-    <button onclick="plus()" type="button" class="operator" id="+" value="+">+</button>
-    <button onclick="minus()" type="button" class="operator" value="-">-</button>
-    <button onclick="times()" type="button" class="operator" value="*">x</button>
-    <button onclick="divide()" type="button" class="operator" value="/">/</button>
+    <button onclick="handleOperator()" type="button" class="operator" id="+" value="+">+</button>
+    <button onclick="handleOperator()" type="button" class="operator" value="-">-</button>
+    <button onclick="handleOperator()" type="button" class="operator" value="*">x</button>
+    <button onclick="handleOperator()" type="button" class="operator" value="/">/</button>
     <button onclick="percent()" type="button" class="operator" value="%">%</button>
 
     <!-- Numbers -->
+    <button onclick="pi(3.14159265359)" type="button" id="pi" value="3.14159265359">π</button>
     <button onclick="numb(7)" type="button" id="numb" value="7">7</button>
     <button onclick="numb(8)" type="button" id="numb" value="8">8</button>
     <button onclick="numb(9)" type="button" id="numb" value="9">9</button>

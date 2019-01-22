@@ -10,13 +10,16 @@ function calculatorStartup() {
 }
 
 function updateDisplay() {
-  const display = document.getElementById("screen");
+  var display = document.getElementById("screen");
   display.value = calculator.displayValue;
   updateDisplay();
 }
 
+function pi() {
+  document.getElementById("screen").value = 3.14159265359;
+}
  function negate() {
-
+   eval()
 }
 
 function numb(numb) {
@@ -43,56 +46,61 @@ else if (document.getElementById("screen").value == "0") {
 } */
 }
 
-function plus() {
-
-}
-
-function minus() {
-
-}
-
-function times() {
-
-}
-
-function divide() {
-
-}
 
 function percent() {
 
 }
-function decimal(numb) {
+function decimal() {
   /* if (calculator.waitingForSecondOperand  === true) return;
 
     if (!calculator.displayValue.includes(dot)) {
       calculator.displayValue += dot;
     }*/
-  document.getElementById("screen").value += numb;
-  console.log(numb);
+  document.getElementById("screen").value += ".";
+  console.log(5);
 }
 
 function clearScreen() {
   document.getElementById("screen").value = 0;
 }
 
-function handleOperator(nextOperator) {
-/*  const { firstOperand, displayValue, operator } = calculator;
+function handleOperator() {
+  var lilScreen = document.getElementById("baby-screen").value += firstOperand + operator;
+  var bigScreen = document.getElementById("screen").value = displayValue;
+
+  const { firstOperand, displayValue, operator } = calculator
   const inputValue = parseFloat(displayValue);
 
-  if (operator && calculator.waitingForSecondOperand) {
+  if (operator && calculator.waitingForSecondOperand)  {
     calculator.operator = nextOperator;
     return;
   }
+
   if (firstOperand == null) {
     calculator.firstOperand = inputValue;
   } else if (operator) {
     const currentValue = firstOperand || 0;
-    const result = performCalculation[operator] (currentValue, inputValue);
+    const result = performCalculation[operator](currentValue, inputValue);
+
     calculator.displayValue = String(result);
-    calculator.displayValue;
-  } */
+    calculator.firstOperand = result;
+  }
+
+  calculator.waitingForSecondOperand = true;
+  calculator.operator = nextOperator;
 }
+
+const performCalculation = {
+  '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
+
+  '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
+
+  '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
+
+  '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
+
+  '=': (firstOperand, secondOperand) => secondOperand,
+};
 
 function equal() {
   document.getElementById("equal-sign") == eval(expression.toString(numb));
