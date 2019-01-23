@@ -5,8 +5,17 @@ const calculator = {
   operator: null,
 };
 
+// Maximum length of characters
+// to display for result.
+const MAX_RESULT_LENGTH = 8;
+// Maximum positive number to display
+// which is dependent on MAX_RESULT_LENGTH.
+const MAX_NUMBER = 9999999;
+// Maximum number of decimal places
+
 function calculatorStartup() {
-  document.getElementById("screen").value = 0;
+  // to set screen to clear instead of adding 0's
+  document.getElementById("screen").value += 0;
 }
 
 function updateDisplay() {
@@ -18,11 +27,8 @@ function updateDisplay() {
 function pi() {
   document.getElementById("screen").value = 3.14159265359;
 }
- function negate() {
-   eval()
-}
 
-function numb(numb) {
+function numb(numb)  {
 
 // To check if numbers appear in console
 if (document.getElementById("screen").value != "0") {
@@ -36,6 +42,9 @@ else if (document.getElementById("screen").value == "0") {
   console.log("2");
 }
 
+
+
+
 /*  const { displayValue, waitingForSecondOperand } = calculator;
 
   if (waitingForSecondOperand === true) {
@@ -46,10 +55,29 @@ else if (document.getElementById("screen").value == "0") {
 } */
 }
 
+function negate() {
 
+  let reverse = -Math.abs(numb);
+  if (document.getElementById("screen").value != "0") {
+    numb = reverse;
+  }
+  console.log(9);
+  calculator.displayValue += reverse ;
+
+
+
+  /*if (document.getElementById("screen").value != "0") {
+  numb = negate;
+  }  else {
+    document.getElementById("screen").value = 0
+    }
+    console.log("negate");
+    document.getElementById("screen").value = negate ; */
+}
 function percent() {
 
 }
+
 function decimal() {
   /* if (calculator.waitingForSecondOperand  === true) return;
 
@@ -65,8 +93,8 @@ function clearScreen() {
 }
 
 function handleOperator() {
-  var lilScreen = document.getElementById("baby-screen").value += firstOperand + operator;
-  var bigScreen = document.getElementById("screen").value = displayValue;
+  document.getElementById("baby-screen").value += (calculator.firstOperand + calculator.operator);
+  document.getElementById("screen").value = displayValue;
 
   const { firstOperand, displayValue, operator } = calculator
   const inputValue = parseFloat(displayValue);
@@ -100,21 +128,10 @@ const performCalculation = {
   '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
 
   '=': (firstOperand, secondOperand) => secondOperand,
+  '%': (firstOperand, secondOperand) => firstOperand / 100,
 };
 
 function equal() {
-  document.getElementById("equal-sign") == eval(expression.toString(numb));
+  document.getElementById("equal-sign").value == eval(expression.toString(numb));
   console.log(numb + numb);
-}
-//Nice-to-Haves//
-function x2power() {
-
-}
-
-function x3power() {
-
-}
-
-function xypower() {
-
 }
