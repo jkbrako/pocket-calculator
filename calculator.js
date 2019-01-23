@@ -57,12 +57,12 @@ else if (document.getElementById("screen").value == "0") {
 
 function negate() {
 
-  let reverse = -Math.abs(numb);
+ /* let reverse = -Math.abs(numb);
   if (document.getElementById("screen").value != "0") {
     numb = reverse;
   }
   console.log(9);
-  calculator.displayValue += reverse ;
+  calculator.displayValue += reverse ; */
 
 
 
