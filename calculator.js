@@ -57,7 +57,7 @@ else if (document.getElementById("screen").value == "0") {
 
 function negate(numb) {
 
-  document.getElementById("screen").value == numb; 
+//  document.getElementById("screen").value == numb; 
 
 
 
