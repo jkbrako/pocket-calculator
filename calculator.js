@@ -55,14 +55,14 @@ else if (document.getElementById("screen").value == "0") {
 } */
 }
 
-function negate() {
+function negate(numb) {
 
- /* let reverse = -Math.abs(numb);
-  if (document.getElementById("screen").value != "0") {
+ let reverse = -Math.abs(numb);
+  if (numb > -1) {
     numb = reverse;
   }
-  console.log(9);
-  calculator.displayValue += reverse ; */
+  console.log(numb);
+  document.getElementById("screen").value += reverse ; 
 
 
 
