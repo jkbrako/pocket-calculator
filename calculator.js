@@ -57,12 +57,7 @@ else if (document.getElementById("screen").value == "0") {
 
 function negate(numb) {
 
- let reverse = -Math.abs(numb);
-  if (numb > -1) {
-    numb = reverse;
-  }
-  console.log(numb);
-  display.value == numb; 
+  document.getElementById("screen").value == numb; 
 
 
 
