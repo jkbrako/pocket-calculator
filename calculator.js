@@ -62,7 +62,7 @@ function negate(numb) {
     numb = reverse;
   }
   console.log(numb);
-  document.getElementById("screen").value += reverse ; 
+  display.value == numb; 
 
 
 
