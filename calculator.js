@@ -56,18 +56,18 @@ else if (document.getElementById("screen").value == "0") {
 }
 
 function negate(numb) {
-
-//  document.getElementById("screen").value == numb; 
-
-
-
-  /*if (document.getElementById("screen").value != "0") {
+  // console.log(numb);
+  // console.log(typeof numb);
+  numb = Number(numb);
+  // 
+  
+  if (document.getElementById("screen").value != "0") {
   numb = negate;
   }  else {
     document.getElementById("screen").value = 0
     }
     console.log("negate");
-    document.getElementById("screen").value = negate ; */
+    document.getElementById("screen").value = negate ; 
 }
 function percent() {
 
