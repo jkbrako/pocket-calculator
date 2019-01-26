@@ -58,6 +58,7 @@ function decimal() {
   if (document.getElementById("screen").value = "") {
     document.getElementById("screen").value = "0.";
   }
+
 }
 console.log(5);
   
