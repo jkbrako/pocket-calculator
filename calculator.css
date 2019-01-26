@@ -12,10 +12,6 @@ html {
   box-sizing: inherit;
 }
 
-h1 {
-
-}
-
 .calculator {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -36,7 +32,6 @@ h1 {
   text-align: right;
   padding-right: 20px;
   padding-left: 10px;
-
 }
 
 .calculator-screen {
@@ -94,11 +89,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr)
 }
-.decimal {
 
-}
-
-
-.power {
-
+.root {
+  color: rgb(178,34,34);
 }
