@@ -55,9 +55,11 @@ function percent() {
 
 function decimal() {
   document.getElementById("screen").value += ".";
-  console.log(5);
+  if (document.getElementById("screen").value = "") {
+    document.getElementById("screen").value = "";
 }
-
+console.log(5);
+  
 function clearScreen() {
   document.getElementById("screen").value = "0";
   document.getElementById("baby-screen").value = "";
